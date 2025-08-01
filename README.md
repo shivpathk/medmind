@@ -1,4 +1,5 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+MedMind is an AI-powered, intelligent medicine reminder backend built using the MERN stack (MongoDB, Express.js, React/Next.js, Node.js). It empowers doctors and pharmacies to automate and personalize medication reminders for patients based on real-life timing, dosage schedules, and smart conditions like sleep hours — no app needed, just SMS.
+This isn’t just a notification tool — it’s a healthcare automation engine helping patients stay on track with their medicines, while keeping doctors/pharmacies in the loop with real-time updates.
 
 ## Getting Started
 

@@ -1,26 +1,48 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary: #3b82f6;
+  --secondary: #10b981;
+  --accent: #8b5cf6;
+  --light: #f0f9ff;
+  --dark: #0f172a;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  min-height: 100vh;
+  color: var(--dark);
+}
+
+@layer components {
+  .card {
+    @apply bg-white rounded-2xl shadow-xl border border-slate-100;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-blue-400 focus:ring-2 focus:ring-blue-100 transition;
+  }
+  
+  .btn-primary {
+    @apply w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-medium py-3 px-6 rounded-xl hover:opacity-90 transition-all shadow-md hover:shadow-lg;
+  }
+  
+  .btn-secondary {
+    @apply w-full bg-slate-100 text-slate-700 font-medium py-3 px-6 rounded-xl hover:bg-slate-200 transition;
+  }
+  
+  .step-indicator {
+    @apply w-8 h-8 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 font-bold;
+  }
+  
+  .step-indicator.active {
+    @apply bg-blue-600 text-white;
+  }
 }

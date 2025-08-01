@@ -1,0 +1,1 @@
+import '../cron/sendReminders.ts';
